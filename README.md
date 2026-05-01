@@ -9,6 +9,7 @@ Code complexity is measured by counting programming tokens (keywords, identifier
 ## Libraries Compared
 
 - [Solana Kit](https://solanakit.com)
+- [Solana Kit (modern, with plugins)](https://solanakit.com)
 - [Solana Kite](https://solanakite.org)
 - [Gill](https://www.gillsdk.com)
 - [Framework Kit](https://github.com/solana-foundation/framework-kit)
@@ -31,6 +32,7 @@ Run `npx tsx count-tokens.ts` to see the results. As of 2026 01 21, they are:
 === Token Count Results ===
 
 Kite                        79 tokens
+Solana Kit (modern)         88 tokens (11.4% more code)
 Framework Kit               99 tokens (25.3% more code)
 web3.js v1 + helpers       122 tokens (54.4% more code)
 web3.js v1                 145 tokens (83.5% more code)
@@ -46,6 +48,7 @@ Solana Kit                 251 tokens (217.7% more code)
 npx tsx kite.ts
 npx tsx gill.ts
 npx tsx kit.ts
+npx tsx kit-modern.ts
 npx tsx framework-kit.ts
 npx tsx umi.ts
 npx tsx web3js.ts
