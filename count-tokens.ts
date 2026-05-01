@@ -4,8 +4,8 @@ import { readFileSync } from "fs";
 const files = [
   { file: "kite.ts", name: "Kite" },
   { file: "gill.ts", name: "Gill" },
-  { file: "kit.ts", name: "Solana Kit" },
-  { file: "kit-modern.ts", name: "Solana Kit (modern)" },
+  { file: "kit-modern.ts", name: "Solana Kit" },
+  { file: "kit-legacy.ts", name: "Solana Kit (legacy)" },
   { file: "framework-kit.ts", name: "Framework Kit" },
   { file: "umi.ts", name: "Umi" },
   { file: "web3js.ts", name: "web3.js v1" },
