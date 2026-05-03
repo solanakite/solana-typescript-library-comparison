@@ -42,6 +42,10 @@ Helius SDK                 247 tokens (212.7% more code)
 Solana Kit (legacy)        251 tokens (217.7% more code)
 ```
 
+## Security / `npm audit`
+
+We override `uuid` to `^14.0.0` via `npm overrides` to clear 13 of the 17 audit warnings. The remaining 4 high-severity warnings are all rooted in [`bigint-buffer`](https://www.npmjs.com/package/bigint-buffer) ([GHSA-3gc7-fjrx-p6mg](https://github.com/advisories/GHSA-3gc7-fjrx-p6mg)), which has no fixed version — the maintainer hasn't published since October 2019, and the transitive parent `@solana/buffer-layout-utils` was archived by Solana Labs in January 2025. We're not pulling in third-party forks to silence it (worse supply-chain risk than a known, scoped DoS-on-bad-input CVE in a read-only comparison repo). Once the ecosystem finishes migrating off `web3.js` v1 / `buffer-layout-utils`, the chain goes away.
+
 ## Running the Examples
 
 ```bash
